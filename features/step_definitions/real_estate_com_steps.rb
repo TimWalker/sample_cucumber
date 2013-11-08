@@ -24,20 +24,48 @@ end
 
 When(/^I search for the following property$/) do |search_table|
   page.visit '/buy'
-  rh = search_table.rows_hash
-  search_location_criteria = "#{rh[:suburb]};#{rh[:state]}"
-  puts "Searching for properties in #{search_location_criteria}"
-  fill_in('where', :with => search_location_criteria)
-  check('unit apartment')
-  #page.fill_in where
-  #page.find("option[value='20120905']").click
-  #page.find(:css, "#cityID[value='62']").set(true)
-  #page.click searchBtn
-
+  selection_criteria = search_table.rows_hash
+  select_location(selection_criteria)
+  select_property_type(selection_criteria)
+  select_max_price(selection_criteria)
+  @results = search_properties
 end
 
 Then(/^all the listings match the State and Suburb$/) do
-  pending # express the regexp above with the code you wish you had
+  puts "#{@results}"
+end
+
+def select_location(selection_criteria)
+  search_location_criteria = "#{selection_criteria[:suburb]};#{selection_criteria[:state]}"
+  puts "Searching for properties in #{search_location_criteria}"
+  fill_in('where', :with => search_location_criteria)
+end
+
+def expand_property_types
+  group_input = find('input[name="propertytypegroup"]')
+  group_input.click
+end
+
+def select_property_type(selection_criteria)
+  expand_property_types
+  property_type = find('input[value="apartment"]')
+  property_type.click
+end
+
+def expand_list_price
+  group_input = find('input[id="maxPrice"]')
+  group_input.click
+end
+
+def select_max_price(selection_criteria)
+  expand_list_price
+  price = find(".LMIDDNoSection", :text => "500,000")
+  price.click
+end
+
+def search_properties
+  search_button = find('input[id="searchBtn"]')
+  search_button.click
 end
 
 def verify_links_to_pages(links_to_verify)
