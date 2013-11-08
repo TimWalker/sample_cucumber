@@ -36,7 +36,7 @@ Then(/^the results page shows the results for '(.*)' and '(.*)'$/) do |state, su
   results_where.text.should include(suburb)
 end
 
-#todp - verify location of each listing, paginate through results
+#todo - verify location of each listing, paginate through results
 Then(/^all the listings match the State and Suburb$/) do
   all_matching_properties = all('a[rel="listingName"]')
   puts "#{all_matching_properties}"
@@ -45,7 +45,7 @@ Then(/^all the listings match the State and Suburb$/) do
   end
 end
 
-#TODO - move to a pageObject
+#todo - move these helper methods to a pageObject
 def select_location(selection_criteria)
   search_location_criteria = "#{selection_criteria[:suburb]};#{selection_criteria[:state]}"
   fill_in('where', :with => search_location_criteria)
