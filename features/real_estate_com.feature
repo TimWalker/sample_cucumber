@@ -4,19 +4,21 @@ Feature: Verify integrity of a real estate web site
   I want to provide some good examples of technique
   So that others may emulate or use as examples
 
+  Background: Browse to home page at 'http://www.realestate.com.au'
+    Given I am on the home page
+
   @nav
-
   Scenario: Landing Page
-    Given all the main navigation links yield expected landing pages
+    Then all the main navigation links yield expected landing pages
 
-  @search
+  @search @wip
   Scenario:
-    Build a Test that performs a search meeting the following criteria.
     When I search for the following property
       |state                |       VIC          |
       |suburb               |       Richmond     |
       |property type        |       Flat         |
       |max price            |       500,000      |
+    Then the results page shows the results for 'VIC' and 'Richmond'
     Then all the listings match the State and Suburb
 
 

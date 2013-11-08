@@ -4,14 +4,13 @@ require 'capybara/cucumber'
 require 'ruby-debug'
 
 
-
 Capybara.default_driver = :selenium
 Capybara.app_host = 'http://www.realestate.com.au'
 World(Capybara)
 
-#Given(/^I am on the home page$/) do
-#  page.visit '/'
-#end
+Given(/^I am on the home page$/) do
+  page.visit '/'
+end
 
 Then(/^all the main navigation links yield expected landing pages$/) do
   results = page.all('.rui-main-nav a')
@@ -31,15 +30,22 @@ When(/^I search for the following property$/) do |search_table|
   search_properties
 end
 
+Then(/^the results page shows the results for '(.*)' and '(.*)'$/) do |state, suburb|
+  results_where = find('span[class="whereTerm"]')
+  results_where.text.should include(state)
+  results_where.text.should include(suburb)
+end
+
+#todp - verify location of each listing, paginate through results
 Then(/^all the listings match the State and Suburb$/) do
   all_matching_properties = all('a[rel="listingName"]')
   puts "#{all_matching_properties}"
   all_matching_properties.each do |element|
     puts "#{element}"
-    debugger
   end
 end
 
+#TODO - move to a pageObject
 def select_location(selection_criteria)
   search_location_criteria = "#{selection_criteria[:suburb]};#{selection_criteria[:state]}"
   puts "Searching for properties in #{search_location_criteria}"
