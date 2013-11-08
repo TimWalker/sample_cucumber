@@ -1,17 +1,14 @@
 @real_estate_com_au
-Feature:
-  Using the Cucumber w/Ruby framework complete the following tasks.
-  Starting at http://www.realestate.com.au
-  i.e. Buy link = realestate.com.au/buy
-
-#  Background:
-#    Given I am on the home page
+Feature: Verify integrity of a real estate web site
+  As a person demonstrating the use of Cucumber in a Ruby environment
+  I want to provide some good examples of technique
+  So that others may emulate or use as examples
 
   @nav
   Scenario: Landing Page
     Then all the main navigation links yield expected landing pages
 
-  @wip @search
+  @search
   Scenario:
     Build a Test that performs a search meeting the following criteria.
     When I search for the following property
