@@ -19,16 +19,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="real_estate_com.feature" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="real_estate_com.feature" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/features/real_estate_com.feature">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="47" selection-start="241" selection-end="241" vertical-scroll-proportion="0.0">
+            <state line="7" column="2" selection-start="250" selection-end="250" vertical-scroll-proportion="0.19961977">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sendmail.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="sendmail.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/python/sendmail.py">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -80,8 +80,8 @@
         <option value="$PROJECT_DIR$/readme.txt" />
         <option value="$PROJECT_DIR$/features/step_definitions/real_estate_com_steps.rb" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/features/real_estate_com.feature" />
         <option value="$PROJECT_DIR$/python/sendmail.py" />
+        <option value="$PROJECT_DIR$/features/real_estate_com.feature" />
       </list>
     </option>
   </component>
@@ -570,16 +570,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/features/real_estate_com.feature">
+    <entry file="file://$PROJECT_DIR$/python/sendmail.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="47" selection-start="241" selection-end="241" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/python/sendmail.py">
+    <entry file="file://$PROJECT_DIR$/features/real_estate_com.feature">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="7" column="2" selection-start="250" selection-end="250" vertical-scroll-proportion="0.19961977">
           <folding />
         </state>
       </provider>

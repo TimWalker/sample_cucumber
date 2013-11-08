@@ -5,8 +5,9 @@ Feature: Verify integrity of a real estate web site
   So that others may emulate or use as examples
 
   @nav
+
   Scenario: Landing Page
-    Then all the main navigation links yield expected landing pages
+    Given all the main navigation links yield expected landing pages
 
   @search
   Scenario:
