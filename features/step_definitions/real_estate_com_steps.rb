@@ -28,11 +28,16 @@ When(/^I search for the following property$/) do |search_table|
   select_location(selection_criteria)
   select_property_type(selection_criteria)
   select_max_price(selection_criteria)
-  @results = search_properties
+  search_properties
 end
 
 Then(/^all the listings match the State and Suburb$/) do
-  puts "#{@results}"
+  all_matching_properties = all('a[rel="listingName"]')
+  puts "#{all_matching_properties}"
+  all_matching_properties.each do |element|
+    puts "#{element}"
+    debugger
+  end
 end
 
 def select_location(selection_criteria)
