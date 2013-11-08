@@ -58,7 +58,8 @@ end
 
 def select_property_type(selection_criteria)
   expand_property_types
-  property_type = find('input[value="apartment"]')
+  search_property_type = selection_criteria["property type"].downcase
+  property_type = find("input[value=#{search_property_type}]")
   property_type.click
 end
 
@@ -69,7 +70,8 @@ end
 
 def select_max_price(selection_criteria)
   expand_list_price
-  price = find(".LMIDDNoSection", :text => "500,000")
+  price_to_search = selection_criteria["max price"]
+  price = find(".LMIDDNoSection", :text => "#{price_to_search}")
   price.click
 end
 

@@ -16,7 +16,7 @@ Feature: Verify integrity of a real estate web site
     When I search for the following property
       |state                |       VIC          |
       |suburb               |       Richmond     |
-      |property type        |       Flat         |
+      |property type        |       Apartment    |
       |max price            |       500,000      |
     Then the results page shows the results for 'VIC' and 'Richmond'
     Then all the listings match the State and Suburb
