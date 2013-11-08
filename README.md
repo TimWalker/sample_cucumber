@@ -1,4 +1,4 @@
-H2sample_cucumber
+sample_cucumber
 ===============
 
 **Example of Some Basic Cucumber in Ruby and Python**
