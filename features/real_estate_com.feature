@@ -11,7 +11,7 @@ Feature: Verify integrity of a real estate web site
   Scenario: Landing Page
     Then all the main navigation links yield expected landing pages
 
-  @search @wip
+  @search
   Scenario:
     When I search for the following property
       |state                |       VIC          |

@@ -22,7 +22,7 @@
       <file leaf-file-name="real_estate_com.feature" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/features/real_estate_com.feature">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="37" selection-start="509" selection-end="509" vertical-scroll-proportion="0.0">
+            <state line="12" column="0" selection-start="444" selection-end="444" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -49,7 +49,7 @@
       <file leaf-file-name="real_estate_com_steps.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/features/step_definitions/real_estate_com_steps.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="35" selection-start="1009" selection-end="1009" vertical-scroll-proportion="0.7414449">
+            <state line="50" column="0" selection-start="1479" selection-end="1479" vertical-scroll-proportion="0.94106466">
               <folding />
             </state>
           </provider>
@@ -570,13 +570,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/features/real_estate_com.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="37" selection-start="509" selection-end="509" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.rbenv/versions/1.9.3-p125/lib/ruby/1.9.1/test/unit/assertions.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="28" column="6" selection-start="811" selection-end="811" vertical-scroll-proportion="0.33269963">
@@ -584,9 +577,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/features/real_estate_com.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="0" selection-start="444" selection-end="444" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/features/step_definitions/real_estate_com_steps.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="35" selection-start="1009" selection-end="1009" vertical-scroll-proportion="0.7414449">
+        <state line="50" column="0" selection-start="1479" selection-end="1479" vertical-scroll-proportion="0.94106466">
           <folding />
         </state>
       </provider>

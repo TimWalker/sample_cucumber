@@ -14,11 +14,11 @@ end
 
 Then(/^all the main navigation links yield expected landing pages$/) do
   results = page.all('.rui-main-nav a')
-  links_to_pages = {}
+  @links_to_pages = {}
   results.each do |element|
-    links_to_pages[element[:text]] = element[:href]
+    @links_to_pages[element[:text]] = element[:href]
   end
-  verify_links_to_pages(links_to_pages)
+  verify_links_to_pages(@links_to_pages)
 end
 
 When(/^I search for the following property$/) do |search_table|
@@ -48,7 +48,6 @@ end
 #TODO - move to a pageObject
 def select_location(selection_criteria)
   search_location_criteria = "#{selection_criteria[:suburb]};#{selection_criteria[:state]}"
-  puts "Searching for properties in #{search_location_criteria}"
   fill_in('where', :with => search_location_criteria)
 end
 
@@ -81,7 +80,7 @@ end
 
 def verify_links_to_pages(links_to_verify)
   links_to_verify.each do | text, link |
-    puts "Verify that #{text} is what #{link} refers to"
+    link.should include(text.tr(" ","-").chomp("s"))
     page.visit(link)
   end
 end
