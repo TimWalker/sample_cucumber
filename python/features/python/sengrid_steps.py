@@ -16,10 +16,9 @@ def given_i_send_an_email_from_sendgrid(step):
     key = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "key")))
     key.send_keys('walketim@gmail.com')
     secret = driver.find_element_by_id('secret')
-    secret.send_keys("walketimsp@ssword")
+    secret.send_keys("Walket1msp@ssword")
     toggle = driver.find_element_by_id('toggle-methods')
     toggle.click()
-    #key = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.NAME, "params[to]")))
     param = driver.find_element_by_name('params[to]')
     param.send_keys("walketim@gmail.com")
     param = driver.find_element_by_name('params[from]')
@@ -30,9 +29,7 @@ def given_i_send_an_email_from_sendgrid(step):
     param.send_keys("This is a test mail that can be safely discarded by recipient")
     send_it = driver.find_element_by_id('Mail')
     send_it.click()
-
-    #driver.close()
-    assert True, 'This step is a stub'
+    driver.close()
 
 @step(u'Then an email should have been sent')
 def then_an_email_should_have_been_sent(step):
