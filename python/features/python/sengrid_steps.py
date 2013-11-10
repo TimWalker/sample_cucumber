@@ -19,16 +19,8 @@ def given_i_send_an_email_from_sendgrid(step):
     key.send_keys('walketim@gmail.com')
     secret = driver.find_element_by_id('secret')
     secret.send_keys("Walket1msp@ssword")
-    toggle = driver.find_element_by_id('toggle-methods')
-    toggle.click()
-    param = driver.find_element_by_name('params[to]')
-    param.send_keys("walketim@gmail.com")
-    param = driver.find_element_by_name('params[from]')
-    param.send_keys("walketim@gmail.com")
-    param = driver.find_element_by_name('params[subject]')
-    param.send_keys("Test Mail")
-    param = driver.find_element_by_name('params[text]')
-    param.send_keys("This is a test mail that can be safely discarded by recipient")
+    toggle_api_methods(driver)
+    fill_in_required_email_form(driver)
     send_it = driver.find_element_by_id('Mail')
     send_it.click()
     page_driver = driver
@@ -42,3 +34,16 @@ def then_an_email_should_have_been_sent(step):
       did_except = True
     assert did_except, 'no error was found in the response'
 
+def toggle_api_methods(driver):
+    toggle = driver.find_element_by_id('toggle-methods')
+    toggle.click()
+
+def fill_in_required_email_form(driver):
+    param = driver.find_element_by_name('params[to]')
+    param.send_keys("walketim@gmail.com")
+    param = driver.find_element_by_name('params[from]')
+    param.send_keys("walketim@gmail.com")
+    param = driver.find_element_by_name('params[subject]')
+    param.send_keys("Test Mail")
+    param = driver.find_element_by_name('params[text]')
+    param.send_keys("This is a test mail that can be safely discarded by recipient")
