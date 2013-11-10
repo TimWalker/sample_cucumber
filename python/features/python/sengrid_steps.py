@@ -8,6 +8,8 @@ from selenium.webdriver.support import expected_conditions as EC
 
 import time
 
+page_driver = None
+
 @step(u'Given I send an email from sendgrid')
 def given_i_send_an_email_from_sendgrid(step):
     driver = webdriver.Firefox()
@@ -29,8 +31,14 @@ def given_i_send_an_email_from_sendgrid(step):
     param.send_keys("This is a test mail that can be safely discarded by recipient")
     send_it = driver.find_element_by_id('Mail')
     send_it.click()
-    driver.close()
+    page_driver = driver
 
 @step(u'Then an email should have been sent')
 def then_an_email_should_have_been_sent(step):
-    assert True, 'This step is a stub'
+    did_except = None
+    try:
+      response_text = page_driver.find_element_by_class_name('error')
+    except Exception:
+      did_except = True
+    assert did_except, 'no error was found in the response'
+
